@@ -1,0 +1,100 @@
+profiles:
+  - profile:
+      name: student_user
+      category: academic
+      usability_window:
+        start: 7
+        end: 23
+      traffic_profile:
+        base_requests_per_minute: 2.0
+        burst_probability: 0.20
+        burst_multiplier: 3
+      domain_base:
+        list_name: default
+      behavior_controls:
+        subdomain_probability: 0.90
+        nxdomain_probability: 0.01
+        reuse_domain_probability: 0.45
+      labeling:
+        default_flag: benign
+        tag: student
+
+  - profile:
+      name: office_employee
+      category: professional
+      usability_window:
+        start: 8
+        end: 18
+      traffic_profile:
+        base_requests_per_minute: 2.5
+        burst_probability: 0.15
+        burst_multiplier: 2
+      domain_base:
+        list_name: default
+      behavior_controls:
+        subdomain_probability: 0.70
+        nxdomain_probability: 0.005
+        reuse_domain_probability: 0.55
+      labeling:
+        default_flag: benign
+        tag: office
+
+  - profile:
+      name: home_user
+      category: general_public
+      usability_window:
+        start: 6
+        end: 24
+      traffic_profile:
+        base_requests_per_minute: 1.2
+        burst_probability: 0.10
+        burst_multiplier: 2
+      domain_base:
+        list_name: default
+      behavior_controls:
+        subdomain_probability: 0.60
+        nxdomain_probability: 0.008
+        reuse_domain_probability: 0.40
+      labeling:
+        default_flag: benign
+        tag: home
+
+  - profile:
+      name: devops_engineer
+      category: professional
+      usability_window:
+        start: 0
+        end: 24
+      traffic_profile:
+        base_requests_per_minute: 3.5
+        burst_probability: 0.30
+        burst_multiplier: 4
+      domain_base:
+        list_name: default
+      behavior_controls:
+        subdomain_probability: 0.95
+        nxdomain_probability: 0.02
+        reuse_domain_probability: 0.65
+      labeling:
+        default_flag: benign
+        tag: devops
+
+  - profile:
+      name: casual_mobile_user
+      category: general_public
+      usability_window:
+        start: 7
+        end: 23
+      traffic_profile:
+        base_requests_per_minute: 0.8
+        burst_probability: 0.05
+        burst_multiplier: 2
+      domain_base:
+        list_name: default
+      behavior_controls:
+        subdomain_probability: 0.50
+        nxdomain_probability: 0.01
+        reuse_domain_probability: 0.35
+      labeling:
+        default_flag: benign
+        tag: mobile

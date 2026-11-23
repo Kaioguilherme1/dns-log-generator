@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Logs gerados localmente
+logs/*.log
+*.log
+
+# SO e IDEs
+.DS_Store
+.idea/
+.vscode/
