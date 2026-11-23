@@ -12,7 +12,7 @@ Se você deseja apenas **reproduzir o experimento e os gráficos do TCC sem gera
 
 | Componente | Onde encontrar | Uso recomendado |
 | :--- | :--- | :--- |
-| **Dataset Completo (Kaggle)** | [kaioguilherme/dns-nxdomain-flood-benign-48h](https://www.kaggle.com/datasets/kaioguilherme/dns-nxdomain-flood-benign-48h) | Baixar diretamente `benigno_unificado.log` (11,94 GB), `ataques_unificados.log` ou `dns_eventos_estruturados_48h.csv.gz`. |
+| **Dataset Completo (Kaggle)** | [kaioguilherme/dns-nxdomain-flood-benign-48h](https://www.kaggle.com/datasets/kaioguilherme/dns-nxdomain-flood-benign-48h) · DOI [`10.34740/KAGGLE/DSV/22300671`](https://doi.org/10.34740/KAGGLE/DSV/22300671) | Baixar diretamente `benigno_unificado.log` (11,94 GB), `ataques_unificados.log` ou `dns_eventos_estruturados_48h.csv.gz`. |
 | **Pipeline de Detecção e Gráficos** | [Kaioguilherme1/nxdomain-flood-iforest-tcc](https://github.com/Kaioguilherme1/nxdomain-flood-iforest-tcc) | Treinar o *Isolation Forest*, rodar a comparação com *Nadler et al. (2019)* e gerar as figuras/tabelas do TCC. |
 | **Este Repositório (`dns-log-generator`)** | Código-fonte atual | Reproduzir ou customizar do zero a geração estocástica de tráfego DNS benigno em formato BIND 9. |
 
@@ -83,4 +83,19 @@ Os registros serão gravados em `logs/dns_events.log` (com registro operacional 
 
 ## Integração com o Pipeline do TCC
 
-Se você acabou de baixar o dataset pronto no [Kaggle (`dns-nxdomain-flood-benign-48h`)](https://www.kaggle.com/datasets/kaioguilherme/dns-nxdomain-flood-benign-48h) ou gerou `logs/dns_events.log` com este simulador, utilize o repositório **[nxdomain-flood-iforest-tcc](https://github.com/Kaioguilherme1/nxdomain-flood-iforest-tcc)** para realizar a preparação dos dados, extração de atributos em janelas de 30 s, treinamento do *Isolation Forest* e geração automática de todas as figuras e tabelas do TCC.
+Se você acabou de baixar o dataset pronto no [Kaggle (`dns-nxdomain-flood-benign-48h`)](https://www.kaggle.com/datasets/kaioguilherme/dns-nxdomain-flood-benign-48h) (DOI [`10.34740/KAGGLE/DSV/22300671`](https://doi.org/10.34740/KAGGLE/DSV/22300671)) ou gerou `logs/dns_events.log` com este simulador, utilize o repositório **[nxdomain-flood-iforest-tcc](https://github.com/Kaioguilherme1/nxdomain-flood-iforest-tcc)** para realizar a preparação dos dados, extração de atributos em janelas de 30 s, treinamento do *Isolation Forest* e geração automática de todas as figuras e tabelas do TCC.
+
+---
+
+## Como Citar o Dataset
+
+```bibtex
+@misc{kaio_guilherme_ferraz_de_sousa_silva_2026,
+  title     = {DNS NXDOMAIN Flood & Benign Traffic Dataset (48h)},
+  url       = {https://www.kaggle.com/dsv/22300671},
+  doi       = {10.34740/KAGGLE/DSV/22300671},
+  publisher = {Kaggle},
+  author    = {Kaio Guilherme Ferraz de Sousa Silva},
+  year      = {2026}
+}
+```
